@@ -36,7 +36,7 @@ The main goals of this project were:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [Your Git Repository URL]
+    git clone https://github.com/VCCT-PROG7312-2025-G1/PROG7312_ST10303017_PART1.git
     ```
 2.  **Open in Visual Studio:** Open the `.sln` file in Visual Studio 2022.
 3.  **Build:** Press `Ctrl+Shift+B` to build the project and restore dependencies.
