@@ -1,5 +1,5 @@
 # PROG7312 Part 1 - ORACLE Application
-**Student:** [Your Name]
+**Student:** Calwyn Govender
 **Student Number:** ST10303017
 
 ## 1. Project Overview
