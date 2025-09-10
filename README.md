@@ -11,18 +11,7 @@ The main goals of this project were:
 - To create a well-designed and user-friendly interface.
 - **To exclusively use a custom-built data structure (`CustomLinkedList<T>`) for all data handling, as required by the assignment brief.**
 
-## 2. Screenshots
 
-*(Screenshots of the running application go here)*
-
-#### Login Page
-![Login Screen](link_to_your_login_screenshot.png)
-
-#### Main Menu
-![Main Menu](link_to_your_main_menu_screenshot.png)
-
-#### Report an Issue Form
-![Report Form](link_to_your_report_form_screenshot.png)
 
 ## 3. Features Implemented
 
@@ -30,7 +19,7 @@ The main goals of this project were:
 - **User Login:** Users can log in with pre-defined credentials to access the application.
 - **Report an Issue:** A detailed form allows users to submit service requests with:
   - Location
-  - Category (Dropdown)
+  - Category 
   - Detailed Description
   - An option to attach a media file.
 - **My Reports:** After logging in, users can see a list of the issues they have submitted.
