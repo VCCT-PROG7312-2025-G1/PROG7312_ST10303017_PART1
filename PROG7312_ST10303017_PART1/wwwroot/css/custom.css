@@ -1,0 +1,65 @@
+﻿/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background for Login and Dashboard pages */
+.body-login, .body-dashboard {
+    background-image: url('../images/backgroundcity.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/*Login form */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 10vh; 
+}
+
+/* --- Carousel Styles for the Main Menu --- */
+
+#mainMenuCarousel {
+    height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+/* The content box inside each carousel slide */
+.carousel-content-box {
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 15px;
+    min-width: 50%;
+    max-width: 600px;
+}
+
+    .carousel-content-box h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .carousel-content-box p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+/* Styling for the next/prev buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+}

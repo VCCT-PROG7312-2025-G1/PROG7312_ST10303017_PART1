@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Main Menu";
+    ViewData["BodyClass"] = "body-dashboard";
+}
+
+<div id="mainMenuCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <!-- Slide 1: Report Issues -->
+        <div class="carousel-item active">
+            <div class="carousel-content-box">
+                <h2>Report Issues</h2>
+                <p>Submit a new report for sanitation, roads, utilities, or other problems.</p>
+                <a asp-action="NewRequest" class="btn btn-primary btn-lg">Create Report</a>
+            </div>
+        </div>
+
+        <!-- Slide 2: Local Events -->
+        <div class="carousel-item">
+            <div class="carousel-content-box">
+                <h2>Local Events</h2>
+                <p>Stay updated with community events and municipal announcements.</p>
+                <a asp-action="LocalEvents" class="btn btn-info btn-lg">View Events</a>
+            </div>
+        </div>
+
+        <!-- Slide 3: Service Status -->
+        <div class="carousel-item">
+            <div class="carousel-content-box">
+                <h2>Service Status</h2>
+                <p>Check the status of existing service requests.</p>
+                <a asp-action="ServiceStatus" class="btn btn-secondary btn-lg">Check Status</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Carousel "Previous" and "Next" controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainMenuCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainMenuCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

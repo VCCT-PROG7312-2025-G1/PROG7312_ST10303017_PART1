@@ -1,0 +1,86 @@
+﻿@model PROG7312_ST10303017_PART1.Models.ViewModels.NewRequestViewModel
+@{
+    ViewData["Title"] = "Report a New Issue";
+}
+
+<h1>Report an Issue</h1>
+<p>Please fill out the form below to submit your service request.</p>
+<hr />
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- Add enctype for file uploads -->
+        <form asp-action="NewRequest" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- a. Location Input (Textbox) -->
+            <div class="form-group mb-3">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" placeholder="e.g., Corner of Main St and Oak Ave" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+
+            <!-- b. Category Selection (Dropdown) -->
+            <div class="form-group mb-3">
+                <label asp-for="Category" class="control-label"></label>
+                <select asp-for="Category" class="form-control">
+                    <option value="">-- Select a Category --</option>
+                    <option>Sanitation</option>
+                    <option>Roads</option>
+                    <option>Utilities</option>
+                    <option>Parks</option>
+                </select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+
+            <!-- c. Description Box (RichTextBox equivalent) -->
+            <div class="form-group mb-3">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="6" placeholder="Please provide as much detail as possible..."></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <!-- d. Media Attachment -->
+            <div class="form-group mb-3">
+                <label asp-for="MediaAttachment" class="control-label"></label>
+                <input asp-for="MediaAttachment" type="file" class="form-control" />
+                <span asp-validation-for="MediaAttachment" class="text-danger"></span>
+            </div>
+
+            <!-- f. Engagement Feature (Label) -->
+            <div class="mt-4">
+                <p id="engagementMessage" class="text-success fw-bold"></p>
+            </div>
+
+            <!-- e. Submit Button -->
+            <div class="form-group mt-4">
+                <input type="submit" value="Submit Report" class="btn btn-primary" />
+
+                <!-- g. Navigation Button -->
+                <a asp-action="Dashboard" class="btn btn-secondary">Back to Main Menu</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // Simple script for the engagement feature
+        $(document).ready(function () {
+            const messages = ["Great start!", "Keep going...", "Excellent detail!", "Almost there!", "Ready to submit!"];
+            let messageIndex = 0;
+            const engagementLabel = $('#engagementMessage');
+
+            // Show a new message every time the user fills in a field
+            $('form input, form select, form textarea').on('change keyup', function() {
+                if ($(this).val() !== "" && messageIndex < messages.length) {
+                    engagementLabel.text(messages[messageIndex]);
+                    messageIndex++;
+                }
+            });
+        });
+    </script>
+}
