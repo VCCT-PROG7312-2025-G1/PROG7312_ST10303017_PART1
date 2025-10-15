@@ -9,7 +9,7 @@ namespace PROG7312_ST10303017_PART1.Services
         private static readonly CustomLinkedList<User> _users = new CustomLinkedList<User>();
         private static readonly CustomLinkedList<ServiceRequest> _serviceRequests = new CustomLinkedList<ServiceRequest>();
 
-        public static User CurrentUser { get; private set; }
+        public static User CurrentUser { get; private set; }//
 
         static DataManager()
         {
